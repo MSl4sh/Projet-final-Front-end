@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import style from "../../components/Log/log.module.css"
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -17,9 +18,9 @@ const Login = () => {
             <br />
             <label htmlFor="password">Mot de passe</label>
             <br />
-            <input type="text" name='password' id='password' onChange={(e) =>setPassword(e.target.value)} value={password}/>
+            <input type="password" name='password' id='password' onChange={(e) =>setPassword(e.target.value)} value={password}/>
             <br />
-            <input type="submit" value="connection" />
+            <input type="submit" value="connection" className={style.submit} />
         </form>
     );
 };
