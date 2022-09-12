@@ -1,19 +1,28 @@
 .connectionform{
     display: flex;
-    background: rgba( 255, 255, 255, 0.4 );
+    background: rgba( 255, 255, 255, 0.7 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 20px;
-    
     justify-content: center;
     align-items: center;
     height: 250px;
 }
 .connectionform div{
-    margin: 20px
+    margin-inline:20px;
+}
+.passerror{
+    color:red;
+    font-size: .7rem;
+    
+}
+.mailerror{
+    color:red;
+    font-size: .7rem;
+    
 }
 
 
@@ -45,6 +54,11 @@ input{
     border-radius: 10px;
     border: none;
     text-align: center;
+}
+input:focus{
+    
+    border:  rgb(32, 84, 157) ;
+    
 }
 .submit{
     background-color: rgb(32, 84, 157) ;
