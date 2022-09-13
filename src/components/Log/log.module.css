@@ -1,30 +1,29 @@
 .connectionform{
-    display: flex;
-    background: rgba( 255, 255, 255, 0.7 );
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background: rgba( 255, 255, 255, 0.3 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 20px;
-    justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 400px;
+    width:700px;
 }
-.connectionform div{
+/* .connectionform div{
+   
+} */
+.loginform{
+    margin-right:50px;
     margin-inline:20px;
 }
-.passerror{
-    color:red;
-    font-size: .7rem;
+.error{
+    color:rgb(255, 123, 123);
+    font-size: 1rem;
     
 }
-.mailerror{
-    color:red;
-    font-size: .7rem;
-    
-}
-
 
 li{
     list-style: none;
@@ -36,16 +35,18 @@ li{
     color:white;
     font-size: 1rem;
     font-weight: 500;
+    
     transition: 0.5s;
 }
 li:hover{
-    background-color: rgb(40, 105, 196);
+    background-color: rgb(55, 138, 255);
     transition: 0.5s;
     cursor: pointer;
 }
 
 .active{
     background-color: rgb(55, 138, 255);
+    pointer-events: none;
 }
 label{
     color:white;
@@ -54,16 +55,35 @@ input{
     border-radius: 10px;
     border: none;
     text-align: center;
+    width: 250px;
+    
 }
 input:focus{
     
-    border:  rgb(32, 84, 157) ;
+    outline-color:  rgb(32, 84, 157) ;
+    
+    
     
 }
 .submit{
     background-color: rgb(32, 84, 157) ;
     border-radius: 20px;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 30px;
     color:white;
+    transition: 0.2s;
+    
+}
+.submit:hover{
+    background-color: rgb(55, 138, 255) ;
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+
+.check{
+    display:flex;
+    font-size: 0.8rem;
+    align-items: center;
+    
 }

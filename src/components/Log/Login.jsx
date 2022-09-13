@@ -2,8 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import style from "../../components/Log/log.module.css"
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
+
+    const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -13,9 +17,9 @@ const Login = () => {
         const passError= document.getElementById('passError')
 
         axios({
-            method:"post",
+            method:"POST",
             url:`${process.env.REACT_APP_API_URL}api/user/login`,
-            withCredentials: true,
+            // withCredentials: true,
             data: {
                 email,
                 password,
@@ -23,10 +27,10 @@ const Login = () => {
         })
         .then((res) => {
             if (res.data.errors){
-                mailError.innerHTML = res.data.errors.email
-                passError.innerHTML = res.data.errors.paswword
+                
+                passError.innerHTML = res.data.errors
             } else {
-                window.location ='/'
+                navigate("/")
             }
         })
         .catch ((err) => {
@@ -34,16 +38,21 @@ const Login = () => {
         })
     }
     return (
-        <form action="" onSubmit={handleLogin} id="loginForm">
-            <label htmlFor="email">Email</label>
-            <br />
-            <input type="text" name='email' id='email' onChange={(e) =>setEmail(e.target.value)} value={email}/>
-            <div className={style.mailerror} id="mailError"></div>
+        <form action="" className={style.loginform} onSubmit={handleLogin} id="loginForm"
+        >
+            <div>
+                <label htmlFor="email">Email</label>
+                <br />
+                <input type="text" name='email' id='email' onChange={(e) =>setEmail(e.target.value)} value={email}/>
+            </div>
             
-            <label htmlFor="password">Mot de passe</label>
-            <br />
-            <input type="password" name='password' id='password' onChange={(e) =>setPassword(e.target.value)} value={password}/>
-            <div className={style.passerror} id="passError"></div>
+            <div>
+                <label htmlFor="password">Mot de passe</label>
+                <br />
+                <input type="password" name='password' id='password' onChange={(e) =>setPassword(e.target.value)} value={password}/>
+            </div>
+            <div className={style.error} id="passError"></div>
+            
             
             <input type="submit" value="connection" className={style.submit} />
         </form>
