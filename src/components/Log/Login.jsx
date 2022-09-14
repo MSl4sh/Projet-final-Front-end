@@ -13,13 +13,12 @@ const Login = () => {
 
     const handleLogin = (e) =>{
         e.preventDefault();
-        const mailError= document.getElementById('mailError')
+        
         const passError= document.getElementById('passError')
 
         axios({
             method:"POST",
             url:`${process.env.REACT_APP_API_URL}api/user/login`,
-            // withCredentials: true,
             data: {
                 email,
                 password,

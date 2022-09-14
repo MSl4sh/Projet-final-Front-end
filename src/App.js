@@ -11,20 +11,23 @@ function App() {
   const[uid, setUid]= useState(null)
 
   useEffect(() =>{
+    console.log("hello")
     const fetchToken = async() =>{
+      console.log("là c'est bon")
       await axios({
         method:'GET',
         url:`${process.env.REACT_APP_API_URL}jsonWebTokenId`,
-        withCredentials:true
+        // withCredentials:true
       })
-      .then((res) => {
-        console.log(res)
-        setUid(res.data)
-      })
-      .catch((err)=> console.log("Pas de token!"))
+        .then((res) => {
+          console.log("res")
+          setUid(res.data)
+        })
+        .catch((err)=> console.log("Pas de token!"))
     }
     fetchToken()
-  }, [uid])
+  }, [])
+  
 
   const element = useRoutes(routes)
   return (

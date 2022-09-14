@@ -20,7 +20,6 @@ const Register = () => {
         axios({
             method:"POST",
             url:`${process.env.REACT_APP_API_URL}api/user/register`,
-            // withCredentials: true,
             data: {
                 email,
                 pseudo,
