@@ -1,9 +1,10 @@
 import './App.css';
 import {useRoutes} from "react-router-dom"
 import {routes} from "./Routes"
-import { UidContext } from './components/AppContext';
+import { Provider } from 'react-redux';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import store from "../src/store/store"
 
 
 function App() {
@@ -31,11 +32,11 @@ function App() {
 
   const element = useRoutes(routes)
   return (
-    <UidContext.Provider value={uid}>
+    <Provider store={store}>
     <div className="App">
       {element}
     </div>
-    </UidContext.Provider>
+    </Provider>
   );
 };
 

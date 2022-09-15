@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import style from "../../components/Log/log.module.css"
+import { useDispatch, useSelector } from "react-redux"
+import { registerUser } from '../../store/actions/auth-action';
 import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
@@ -9,36 +10,46 @@ const Register = () => {
     const [pseudo, setPseudo] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword]= useState('')
-    const passError= document.getElementById('passError')
-    const mailError= document.getElementById('mailError')
-    const pseudoError= document.getElementById('pseudoError')
+    const dispatch = useDispatch()
+    const isConnected = useSelector(state => state.auth.isConnected)
+    const errorMsg= useSelector(state=> state.auth.errorMsg)
+
+    useEffect(()=>{
+        console.log("déclenché")
+        if(isConnected){
+            navigate("/profil")
+        }
+
+        if(errorMsg){
+            const passError= document.getElementById('passError')
+            const mailError= document.getElementById('mailError')
+            const pseudoError = document.getElementById('pseudoError')
+            if(errorMsg){
+                passError.innerHTML = errorMsg.password
+            }
+            if(errorMsg){
+                pseudoError.innerHTML = errorMsg.pseudo
+            }
+            if(errorMsg){
+                mailError.innerHTML = errorMsg.email
+            }
+            
+
+        }
+
+    },[isConnected, errorMsg])
 
 
     const handleRegister = (e) =>{
-        console.log("coucou")
+        
         e.preventDefault();
-        axios({
-            method:"POST",
-            url:`${process.env.REACT_APP_API_URL}api/user/register`,
-            data: {
-                email,
-                pseudo,
-                password,
-            }
-        })
-        .then((res) => {
-            if (res.data.errors){
-                pseudoError.innerHTML = res.data.errors.pseudo
-                mailError.innerHTML = res.data.errors.email
-                passError.innerHTML = res.data.errors.password
-            } else {
-                console.log("hello")
-                navigate("/")
-            }
-        })
-        .catch ((err) => {
-            console.log(err)
-        })
+
+        const data = {
+            email,
+            pseudo,
+            password,
+        }
+        dispatch(registerUser(data))
     }
     
     return (
