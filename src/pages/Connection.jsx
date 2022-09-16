@@ -4,7 +4,7 @@ import style from "../../src/pages/pages.module.css"
 
 const Connection = () => {
     return (
-        <div className={style.profil}>
+        <div className={style.connexion}>
             <div className='log-container'>
                 <Log login={false} register={true}/>
             </div>

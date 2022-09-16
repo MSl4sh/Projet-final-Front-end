@@ -1,0 +1,45 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width:100vw;
+    height: 10vh;
+    color: white;
+}
+.navimg, .logout{
+    width:10vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+
+
+}
+
+
+.menu{
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    width:80vw;
+}
+.icon{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right:5px;
+    width: 30px;
+    height: 30px;
+}
+.menu h2{
+    margin: 0 20px;
+    display:flex;
+}
+
+.logout{
+    font-size: 1.5rem;
+}
+
+
+

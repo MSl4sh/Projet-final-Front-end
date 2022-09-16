@@ -20,12 +20,12 @@
     margin-inline:20px;
 }
 .error{
-    color:rgb(255, 123, 123);
+    color:rgb(215, 0, 0);
     font-size: 1rem;
     
 }
 
-li{
+.formcontainer li{
     list-style: none;
     
     background-color: rgb(32, 84, 157) ;
@@ -38,7 +38,7 @@ li{
     
     transition: 0.5s;
 }
-li:hover{
+.formcontainer li:hover{
     background-color: rgb(55, 138, 255);
     transition: 0.5s;
     cursor: pointer;
