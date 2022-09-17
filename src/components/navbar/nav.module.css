@@ -8,20 +8,23 @@
 .navimg, .logout{
     width:10vw;
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: red;
+    
 
 
 }
-
+.logo{
+    width: 80px;
+    
+}
 
 .menu{
     display:flex;
-    /* flex-direction: column; */
+    
     justify-content: center;
     align-items: center;
-    background-color: blueviolet;
+    
     width:80vw;
 }
 .icon{
