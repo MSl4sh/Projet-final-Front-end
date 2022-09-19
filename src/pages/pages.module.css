@@ -9,7 +9,13 @@
 .connexion{
     display:flex;
     justify-content: center;
-    align-items: center;
+    
     width: 100vw;
     height:100vh;
+}
+
+.logo{
+    width: 15vw;
+    display: block;
+    margin:0 auto;
 }

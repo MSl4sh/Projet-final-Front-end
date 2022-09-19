@@ -1,0 +1,131 @@
+.blockprofil{
+    width: 40vw;
+    height: 75vh;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.profilform{
+   
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.profilpic{
+    display:flex;
+    justify-content: center;
+    
+    width: 150px;
+    height: 150px;
+    
+
+}
+.uploadpic{
+    display:flex;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profilpic img{
+    width: 100%;
+    
+    border-radius: 300px;
+}
+
+.upload{
+    display:flex;
+    justify-content: center;
+}
+.changepic {
+    background-color: rgb(32, 84, 157) ;
+    border-radius: 20px;
+    
+    padding: 5px;
+    color:white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.changepic:hover {
+    background-color: rgb(55, 138, 255);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+
+input[type="file"] {
+    display: none;
+}
+
+.infouser{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.bio button{
+    display:block;
+    margin: 0 auto;
+    background-color: rgb(32, 84, 157) ;
+    border-radius: 20px;
+    border: none;
+    padding: 8px;
+    color:white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.bio textarea{
+    border-radius:10px;
+    resize: none;
+    text-align: center;
+}
+
+.bio textarea:focus{
+    outline-color:  rgb(32, 84, 157) ;
+    
+}
+.bio p {
+    width:463px;
+    height:81px;
+    border: 1px solid rgba( 255, 255, 255, 0.38 );
+    border-radius: 10px;
+}
+
+.count{
+    margin-top: 50px;
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.count div{
+    border: 1px solid white;
+    width: 150px;
+    height:100px;
+    border-radius: 10px;
+    
+}
+
+.member{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.member p{
+    font-size: 0.9rem;
+    font-weight: 500;
+}

@@ -4,6 +4,7 @@ import {useSelector} from "react-redux"
 import { useNavigate } from 'react-router-dom';
 import style from "../../src/pages/pages.module.css"
 import Nav from "../components/navbar/nav"
+import Profilform from '../components/profil/Profilform';
 
 
 const Profil = () => {
@@ -30,7 +31,7 @@ const Profil = () => {
             </div>
             
             <div className={style.profil}>
-                <h1>Profil de {user.pseudo}</h1> 
+                <Profilform/>
                 
             </div>
         </div>

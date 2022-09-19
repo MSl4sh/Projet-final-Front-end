@@ -7,7 +7,7 @@
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    border-radius: 20px;
+    border-radius: 10px;
     align-items: center;
     height: 400px;
     width:700px;
@@ -45,7 +45,7 @@
 }
 
 .active{
-    background-color: rgb(55, 138, 255);
+    background-color: rgb(56, 139, 255);
     pointer-events: none;
 }
 label{

@@ -1,9 +1,9 @@
-
+import Nav from "../components/navbar/nav"
 
 const Home = () => {
     return (
         <div>
-            Home
+            <Nav/>
         </div>
     );
 };

@@ -21,7 +21,7 @@ const Login = () => {
     useEffect(()=>{
         console.log("déclenché")
         if(isConnected){
-            navigate("/profil")
+            navigate("/home")
         }
 
         if(errorMsg){
