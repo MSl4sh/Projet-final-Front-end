@@ -66,7 +66,7 @@ const authReducer = createReducer(initialState, (builder) => {
         })
         .addCase(uploadProfil.fulfilled, (state, action) => {
             state.user= action.payload
-            console.log(action)
+            
         })
         .addCase(updateBio.fulfilled, (state, action) => {
             state.user= action.payload

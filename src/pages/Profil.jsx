@@ -26,7 +26,6 @@ const Profil = () => {
     return (
         <div>
             <div>
-                {/* <img src={"http://localhost:8080/"+user.img} className={style.profilpic} alt="" /> */}
                 <Nav/>
             </div>
             

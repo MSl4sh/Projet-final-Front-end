@@ -70,13 +70,10 @@ const Register = () => {
             <input type="password" name='password' id='password' onChange={(e) =>setPassword(e.target.value)} value={password}/>
             <div className={style.error} id="passError"></div>
             <br />
-            <div >
-                <input type="checkbox" name="CG" id="CG" />
-                <label htmlFor="CG" >Accepter conditions générales d'utilisation</label>
-            </div>
+           
             <br />
             
-            <input type="submit" value="connection" className={style.submit} />
+            <input type="submit" value="connexion" className={style.submit} />
         </form>
     );
 };

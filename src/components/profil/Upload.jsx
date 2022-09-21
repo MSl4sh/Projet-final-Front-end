@@ -12,7 +12,7 @@ import { faImage} from '@fortawesome/free-solid-svg-icons';
 const Upload = () => {
 
     
-    const [file, setFile] = useState()
+    // const [file, setFile] = useState()
     const dispatch = useDispatch()
     const user = useSelector(state=> state.auth.user)
     const isConnected = useSelector(state => state.auth.isConnected)
@@ -25,28 +25,28 @@ const Upload = () => {
 
     },[isConnected])
 
-    const handlePicture = (e) =>{
-        e.preventDefault()
+    const handlePicture = (file) =>{
+        
         const data= new FormData()
         data.append("name", user.pseudo)
         data.append("userId", user._id)
         data.append("file", file, "j'ai envie de crever.jpg")
 
-        console.log(data);
+        
 
         dispatch(uploadProfil(data))
-
+        
 
     }
     
     return (
         <div className={style.uploadpic}>
-            <form action="" onSubmit={handlePicture} >
+            <form action="" >
                 <label htmlFor="file" className={style.changepic}><FontAwesomeIcon icon={faImage} /> Changer d'image</label>
                 <br />
-                <input type="file" id='file' name='file' accept='.jpg, .jpeg, .png' onChange={(e) => setFile(e.target.files[0])}/>
-                <br />
-                <input type="submit" value="Envoyer"/>
+                <input type="file" id='file' name='file' accept='.jpg, .jpeg, .png' onChange={(e) => handlePicture(e.target.files[0])}/>
+                
+                
             </form>
             
         </div>

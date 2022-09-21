@@ -40,7 +40,19 @@ const Nav = () => {
 
     }
     const handleProfil = (e) =>{
-        navigate("/profil")
+        if(isConnected){
+            navigate("/profil")
+        } else{
+            navigate("/connection")
+        }
+
+    }
+    const handleUsers = (e) =>{
+        
+        navigate("/users")
+        
+            
+        
 
     }
     return (
@@ -52,7 +64,7 @@ const Nav = () => {
                 <div className={style.icongroup}>
                     <h2><div className={style.icon} onClick={handleHome}><FontAwesomeIcon icon={faHouse} /></div></h2>
                     <h2><div className={style.icon} ><FontAwesomeIcon icon={faMusic} /></div></h2>
-                    <h2><div className={style.icon} ><FontAwesomeIcon icon={faUserGroup} /></div></h2>
+                    <h2><div className={style.icon} onClick={handleUsers}><FontAwesomeIcon icon={faUserGroup} /></div></h2>
                     <h2><div className={style.icon} onClick={handleProfil}><FontAwesomeIcon icon={faUser} /></div></h2>
                     
                 </div>                    

@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
 import Profil from "./pages/Profil";
-import Trending from "./pages/Trending";
+import Users from "./pages/Users";
 import Connection from "./pages/Connection"
 
 
@@ -21,8 +21,8 @@ export const routes= [
         element: <Connection/>
     },
     {
-        path:"trending",
-        element: <Trending/>
+        path:"users",
+        element: <Users/>
 
     },
     {

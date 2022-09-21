@@ -60,6 +60,7 @@
     transform: scale(1.2);
     transform-origin: center ;
     transition: 0.2s;
+    
 }
 .menu h2{
     margin: 0 20px;
@@ -96,7 +97,7 @@
 }
 
 .login h4{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .notconnected:hover{

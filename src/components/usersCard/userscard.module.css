@@ -1,0 +1,60 @@
+.card{
+    padding-top: 10px;
+    margin:20px;
+    width: 17vw;
+    height: 30vh;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.cardcontent{
+    display: flex;
+    justify-content: center;
+}
+
+.userimg{
+    width:6vw;
+    border-radius: 50%;
+    
+}
+.pseudo{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.follow{
+    
+    display: flex;
+    justify-content: center;
+    margin:0;
+}
+
+.follow button{
+    position:absolute;
+    right:41%;
+    bottom: 10px;
+    background-color: rgb(32, 84, 157) ;
+    border-radius: 20px;
+    border: none;
+    padding: 8px;
+    color:white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.5s;
+
+}
+
+.userlist{
+    display: flex;
+    
+    
+}
+.userlist h4{
+    text-align: center;
+    font-weight: 300;
+    
+}
