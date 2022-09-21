@@ -47,3 +47,33 @@ export const updateBio = createAsyncThunk(
         
     }
 )
+export const addFollow = createAsyncThunk(
+    "user/follow",
+    async (userId, data) => {
+        
+        const res = await axios.patch(
+
+            "http://localhost:8080/api/user/follow/"+userId,
+            data,
+        );
+        console.log(res)
+        return res.data;
+
+        
+    }
+)
+// export const unFollow = createAsyncThunk(
+//     "user/follow",
+//     async (updatedBio) => {
+//         const data= {bio:updatedBio.data}
+//         const res = await axios.patch(
+
+//             "http://localhost:8080/api/user/unfollow"+userId,
+//             data,
+//         );
+//         console.log(res)
+//         return res.data;
+
+        
+//     }
+// )

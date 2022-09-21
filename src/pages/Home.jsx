@@ -9,7 +9,7 @@ const Home = () => {
 
     return (
         <div >
-            <div>
+            <div className={style.navigation}>
             <Nav/>
             </div>
             <div className={style.publication}>

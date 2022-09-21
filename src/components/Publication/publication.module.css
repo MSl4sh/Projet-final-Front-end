@@ -1,108 +1,143 @@
-.publicationContainer{
+.publicationContainer {
     width: 35vw;
     padding: 20px;
-    margin-top:20px;
+    margin-top: 20px;
     height: fit-content;
-    background: rgba( 255, 255, 255, 0.3 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.publicationText{
+.publicationText {
     font-weight: 300;
     font-size: 1.2rem;
 }
-.publicationHeader{
-    display:flex;
+
+.publicationHeader {
+    display: flex;
     justify-content: left;
     align-items: center;
     width: 50%;
 }
-.userpseudo{
+
+.userpseudo {
     font-weight: 600;
     font-size: 1.3rem;
-    margin:0;
+    margin: 0;
 }
-.userheadertext{
+
+.userheadertext {
     margin-left: 5px
 }
 
-.timestamp{
+.timestamp {
     font-size: 0.7rem;
-    margin:0
+    margin: 0
 }
+
 .posterimg {
     width: 2.3vw;
-    height:4.5vh;
+    height: 4.5vh;
     border-radius: 50%;
 }
 
-.publicationMedia{
+.publicationMedia {
     width: 100%;
+    height:fit-content;
 }
-.publicationimg{
+
+.publicationimg {
     width: 100%;
 }
 
-.publicationcontent textarea{
+.publicationcontent textarea {
     margin-top: 10px;
-    width:100%;
-    width:100%;
+    width: 100%;
+    width: 100%;
     overflow: hidden;
-	box-sizing:border-box;
-	resize: none;
-	display:block;
-	max-width:100%;
-	line-height:1.5;
-	padding:10px;
-	border-radius:10px;
-	color: rgb(32, 84, 157);
-    font-size:1rem;
-    background: none;
-    
-    
-    -webkit-backdrop-filter: blur( 4px );
+    box-sizing: border-box;
+    resize: none;
+    display: block;
+    max-width: 100%;
+    line-height: 1.5;
+    padding: 10px;
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-.publicationcontent textarea::placeholder{
-    color:  rgb(255, 255, 255) ;
-}
-.publicationcontent textarea:focus{
-    outline-color:  rgb(32, 84, 157) ;
-    background-color: rgba( 255, 255, 255, 0.80 );
-}
-.publicationcontent textarea:focus::placeholder{
-    color:  rgb(32, 84, 157) ;
+    color: rgb(32, 84, 157);
+    font-size: 1rem;
+    background: none;
+
+
     
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.publicationcontent button{
-    background-color: rgb(32, 84, 157) ;
+.publicationcontent textarea::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.publicationcontent textarea:focus {
+    outline-color: rgb(32, 84, 157);
+    background-color: rgba(255, 255, 255, 0.80);
+}
+
+.publicationcontent textarea:focus::placeholder {
+    color: rgb(32, 84, 157);
+
+}
+
+.postbutton button {
+    background-color: rgb(32, 84, 157);
     border-radius: 20px;
     padding: 10px;
     border: none;
-    color:white;
+    color: white;
     font-size: 1rem;
     font-weight: 500;
     transition: 0.5s;
-    margin-left:5px;
+    margin-left: 5px;
 }
 
-.publicationcontent button:hover{
+.postbutton button:hover {
     background-color: rgb(55, 138, 255);
     transition: 0.5s;
     cursor: pointer;
-   
+
     transition: 0.5s;
 }
 
-.postbutton{
-    margin-top:10px;
-    display:flex;
+.postbutton {
+    margin-top: 10px;
+    display: flex;
     justify-content: right;
-    width:100%;
+    width: 100%;
+}
+.postbutton label {
+    background-color: rgb(32, 84, 157);
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.5s;
+    margin-left: 5px;
+}
+.postbutton label:hover {
+    background-color: rgb(55, 138, 255);
+    transition: 0.5s;
+    cursor: pointer;
+
+    transition: 0.5s;
+    
+}
+iframe {
+    width: 100%;
+    height: 40vh;
+    
 }

@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImage} from '@fortawesome/free-solid-svg-icons';
 
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import style from "./profilform.module.css"
 import { uploadProfil } from '../../store/actions/user-action';
-import { faImage} from '@fortawesome/free-solid-svg-icons';
 
 
 
