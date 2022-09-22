@@ -61,6 +61,7 @@ const authReducer = createReducer(initialState, (builder) => {
             state.token = null;
             state.errorMsg = null;
             state.userId= null;
+            state.user= null
         })
         .addCase(userInfo.fulfilled, (state, action) => {
             console.log(action)

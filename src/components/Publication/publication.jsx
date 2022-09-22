@@ -126,7 +126,7 @@ const Publication = () => {
                                 
                                 <p className={style.publicationText}>{publication.message}</p>
                                 <div className={style.publicationMedia}>
-                                {publication.video && (<iframe src={publication.video} frameborder="0"></iframe>)}
+                                {publication.video && (<iframe src={publication.video+"?enablejsapi=1&origin=http://localhost:3000"} frameborder="0"></iframe>)}
                                 <img src={publication.picture} alt="" className={style.publicationimg}/>
                                 </div>
                                 {user && <div className={style.publicationFooter}>

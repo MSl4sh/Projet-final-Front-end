@@ -10,10 +10,11 @@ const Users = () => {
     const users = useSelector(state => state.users.users)
     const dispatch = useDispatch()
     const isConnected = useSelector(state => state.auth.isConnected)
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
 
     useEffect(() => {
+        console.log("coucou")
         if(!isConnected){
             navigate("/connection")
         }
@@ -22,7 +23,7 @@ const Users = () => {
 
 
 
-    }, [])
+    }, [isConnected])
 
 
     return (

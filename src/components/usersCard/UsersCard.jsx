@@ -8,6 +8,7 @@ import Follow from '../follow/Follow';
 
 const UsersCard = () => {
     const users = useSelector(state=> state.users.users)
+    const userconnected = useSelector(state => state.auth.user)
     const dispatch = useDispatch()
     
     
@@ -20,7 +21,7 @@ const UsersCard = () => {
     },[])
     return (
         <div className={style.userlist}>
-            {users&&users.map((user) =>{
+            {userconnected&&users&&users.filter(user => userconnected._id != user._id).map((user) =>{
                 for (let i =0; i<users.length;i++){
                     return(
                         <div className={style.card}>
