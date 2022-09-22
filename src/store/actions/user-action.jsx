@@ -1,5 +1,7 @@
 import { createAction, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { getUsers } from "./users-action";
+
 
 export const uploadProfil = createAsyncThunk(
     "user/upload",
@@ -49,12 +51,28 @@ export const updateBio = createAsyncThunk(
 )
 export const addFollow = createAsyncThunk(
     "user/follow",
-    async (userId, data) => {
+    async (data,thunkAPI) => {
         
         const res = await axios.patch(
 
-            "http://localhost:8080/api/user/follow/"+userId,
-            data,
+            "http://localhost:8080/api/user/follow/"+data.userId,
+            {idToFollow: data.idToFollow},
+        );
+        console.log(res)
+        
+        return res.data;
+
+        
+    }
+)
+export const unFollow = createAsyncThunk(
+    "user/unfollow",
+    async (data,thunkAPI) => {
+        
+        const res = await axios.patch(
+
+            "http://localhost:8080/api/user/unfollow/"+data.userId,
+            {idToUnfollow: data.idToFollow},
         );
         console.log(res)
         return res.data;
@@ -62,18 +80,3 @@ export const addFollow = createAsyncThunk(
         
     }
 )
-// export const unFollow = createAsyncThunk(
-//     "user/follow",
-//     async (updatedBio) => {
-//         const data= {bio:updatedBio.data}
-//         const res = await axios.patch(
-
-//             "http://localhost:8080/api/user/unfollow"+userId,
-//             data,
-//         );
-//         console.log(res)
-//         return res.data;
-
-        
-//     }
-// )

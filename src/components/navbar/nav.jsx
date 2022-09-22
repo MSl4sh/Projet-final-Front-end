@@ -49,7 +49,11 @@ const Nav = () => {
     }
     const handleUsers = (e) =>{
         
-        navigate("/users")
+        if(isConnected){
+            navigate("/users")
+        } else{
+            navigate("/connection")
+        }
         
             
         

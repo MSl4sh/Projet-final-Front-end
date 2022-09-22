@@ -8,7 +8,7 @@ import { isEmpty } from '../utils/IsEmpty';
 import { getUsers } from '../../store/actions/users-action';
 import { postPublication } from '../../store/actions/publications-action';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faImage} from '@fortawesome/free-solid-svg-icons';
+import { faComment, faHeart, faImage} from '@fortawesome/free-solid-svg-icons';
 
 
 const Publication = () => {
@@ -46,6 +46,15 @@ const Publication = () => {
                 let embed = findLink[i].replace('watch?v=','embed/');
                 let yout =embed.split("&")
                 setVideo(yout[0])
+
+                console.log("avant",findLink)
+                findLink.splice(i,1)
+                console.log("apreès",findLink)
+                console.log("hello",findLink.join(" "))
+                console.log(i)
+                const content = findLink.join(" ")
+                setPublicationsContent(content) 
+                // console.log(video)
                 
                 
             }
@@ -58,7 +67,8 @@ const Publication = () => {
         const data = new FormData() 
         data.append('posterId', user._id)
         data.append('message',publicationContent)
-        if(!video==undefined || !!video==null){
+        console.log("video", video)
+        if(video){
             data.append('video', video)
             
         }
@@ -66,10 +76,11 @@ const Publication = () => {
             data.append('file',file)
         }
         console.log(video)
-        await dispatch(postPublication(data))
+        dispatch(postPublication(data))
         dispatch(getPublications())
         handleCancel()
         setFile(null)
+        setVideo(null)
     }
     const handleCancel = ()=>{
         setPublicationsContent("")
@@ -118,6 +129,17 @@ const Publication = () => {
                                 {publication.video && (<iframe src={publication.video} frameborder="0"></iframe>)}
                                 <img src={publication.picture} alt="" className={style.publicationimg}/>
                                 </div>
+                                {user && <div className={style.publicationFooter}>
+                                    <div className="like">
+                                        <p><FontAwesomeIcon icon={faHeart} /> {publication.likers.length}</p>
+                                    </div>
+                                    <div className="comment">
+                                    <p><FontAwesomeIcon icon={faComment} /> {publication.likers.length}</p>
+
+                                    </div>
+
+                                </div>}
+                                
                             </div>
                         }
                     })}

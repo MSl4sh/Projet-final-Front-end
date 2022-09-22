@@ -30,7 +30,7 @@ const Upload = () => {
         const data= new FormData()
         data.append("name", user.pseudo)
         data.append("userId", user._id)
-        data.append("file", file, "j'ai envie de crever.jpg")
+        data.append("file", file)
 
         
 

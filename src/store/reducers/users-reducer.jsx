@@ -13,6 +13,7 @@ const usersReducer = createReducer(initialState, (builder) => {
         state.users = action.payload;
             
     });
+    
         
 });
 

@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { isEmpty } from '../utils/IsEmpty';
-import { addFollow } from '../../store/actions/user-action';
+import { addFollow, unFollow } from '../../store/actions/user-action';
+import { getUsers } from '../../store/actions/users-action';
 
 const Follow = ({idToFollow}) => {
 
@@ -12,16 +13,19 @@ const Follow = ({idToFollow}) => {
     const userId = useSelector(state => state.auth.userId)
     
     
-
+    useEffect(()=> {
+        console.log('yo!')
+    },[user.follows.length])
     const handleFollow = ()=>{
         
         
-        dispatch(addFollow(userId, idToFollow))
-
+        dispatch(addFollow({userId, idToFollow}))
+        
+        
 
     }
     const handleUnfollow = ()=>{
-        
+        dispatch(unFollow({userId, idToFollow}))
     }
     
 

@@ -4,13 +4,19 @@ import style from "../../src/pages/pages.module.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { getUsers } from '../store/actions/users-action';
 import UsersCard from '../components/usersCard/UsersCard';
+import { useNavigate } from 'react-router-dom';
 
 const Users = () => {
     const users = useSelector(state => state.users.users)
     const dispatch = useDispatch()
+    const isConnected = useSelector(state => state.auth.isConnected)
+    const navigate = useNavigate
 
 
     useEffect(() => {
+        if(!isConnected){
+            navigate("/connection")
+        }
 
         dispatch(getUsers())
 

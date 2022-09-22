@@ -1,6 +1,8 @@
 import { createReducer } from '@reduxjs/toolkit';
+import { useDispatch } from 'react-redux';
 import { loginUser, registerUser, logoutUser, } from '../actions/auth-action';
-import {userInfo, uploadProfil, updateBio } from '../actions/user-action';
+import {userInfo, uploadProfil, updateBio, addFollow, unFollow } from '../actions/user-action';
+import { getUsers } from '../actions/users-action';
 
 
 const initialState = {
@@ -71,7 +73,17 @@ const authReducer = createReducer(initialState, (builder) => {
         .addCase(updateBio.fulfilled, (state, action) => {
             state.user= action.payload
             
-        });
+        })
+        .addCase(addFollow.fulfilled, (state, action) => {
+            
+            state.user= action.payload
+            
+        })
+        .addCase(unFollow.fulfilled, (state, action) => {
+            
+            state.user= action.payload
+            
+        })
         
         
 });

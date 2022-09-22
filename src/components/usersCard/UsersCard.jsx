@@ -37,8 +37,10 @@ const UsersCard = () => {
                         <h4>{user? user.bio:""}</h4>
                     </div>
                 <div>
+                    <div className={style.followFooter}>
                     <div className={style.follow}>
                         <Follow idToFollow={user._id}/>
+                    </div>
                     </div>
                 </div>
             </div>

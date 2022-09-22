@@ -34,9 +34,7 @@
 }
 
 .follow button{
-    position:absolute;
-    right:41%;
-    bottom: 10px;
+    
     background-color: rgb(32, 84, 157) ;
     border-radius: 20px;
     border: none;
@@ -46,6 +44,21 @@
     font-weight: 500;
     transition: 0.5s;
 
+}
+.follow button:hover{
+    
+    background-color: rgb(55, 138, 255);
+    transition: 0.5s;
+    cursor: pointer;
+    
+    transition: 0.5s;
+
+}
+.followFooter{
+    width: 100%;
+    position:absolute;
+    right:50;
+    bottom: 10px;
 }
 
 .userlist{
